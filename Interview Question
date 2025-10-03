@@ -1,0 +1,36 @@
+SQL JOIN INTERVIEW QUESTIONS ANSWERS
+
+1. Difference between INNER and LEFT JOIN?
+INNER JOIN returns only the rows that have matching values in both tables. LEFT JOIN returns all rows from the left table, and the matched rows from the right table. If there’s no match, NULLs are returned for columns from the right table.
+
+2. What is a FULL OUTER JOIN?
+FULL OUTER JOIN returns all records when there is a match in either left or right table. It combines the results of both LEFT and RIGHT JOINs, showing all data from both tables and filling in NULLs where there is no match.
+
+3. Can joins be nested?
+Yes, joins can be nested. You can join two tables and then use that result to join with another table. This is useful when working with complex queries involving multiple relationships.
+
+4. How to join more than 2 tables?
+You can join more than two tables by chaining multiple JOIN clauses. Each JOIN connects one table to the result of the previous join, using appropriate ON conditions to match keys.
+
+5. What is a cross join?
+A CROSS JOIN returns the Cartesian product of two tables, meaning every row from the first table is combined with every row from the second table. It’s rarely used unless explicitly needed.
+
+6. What is a natural join?
+A NATURAL JOIN automatically joins tables based on columns with the same name and compatible data types. It eliminates the need to specify the ON condition manually, but can be risky if unintended columns match.
+
+7. Can you join tables without foreign key?
+Yes, you can join tables without a foreign key. Joins are based on matching column values, not necessarily on defined foreign key constraints. However, foreign keys help maintain data integrity.
+
+8. What is a self-join?
+A self-join is a join where a table is joined with itself. It’s useful for comparing rows within the same table, such as finding employees who report to the same manager.
+
+9. What causes Cartesian product?
+A Cartesian product occurs when a join lacks a proper ON condition, especially in CROSS JOINs or accidental joins. It results in every row from one table being paired with every row from another.
+
+10. How to optimize joins?
+To optimize joins:
+- Use indexes on join columns
+- Avoid joining large tables unnecessarily
+- Filter data early using WHERE
+- Use INNER JOIN when possible
+- Analyze execution plans to identify bottlenecks
